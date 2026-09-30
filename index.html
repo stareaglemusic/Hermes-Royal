@@ -1,10 +1,1119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Hermes Royal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hermes Royal Inc. | HVAC & Building Services</title>
+<meta name="description" content="Hermes Royal Inc. — professional HVAC installation, diagnostics, repair, preventive maintenance, mini-splits, heat pumps, central air and commercial HVAC services.">
+
+<style>
+:root{
+  --black:#050505;
+  --black2:#0c0c0c;
+  --gold:#d5a64a;
+  --gold2:#f4d477;
+  --gold3:#9c6a22;
+  --cream:#fbf7ed;
+  --white:#fff;
+  --ink:#171717;
+  --muted:#6e6a62;
+  --line:#e7dfd0;
+  --shadow:0 24px 70px rgba(0,0,0,.16);
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.6
+}
+
+a{
+  text-decoration:none;
+  color:inherit
+}
+
+.container{
+  width:min(1160px,92%);
+  margin:auto
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(5,5,5,.94);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(213,166,74,.22)
+}
+
+.nav{
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px
+}
+
+.logo-word{
+  color:white;
+  font-weight:900;
+  letter-spacing:.08em;
+  font-size:22px
+}
+
+.logo-word span{
+  color:var(--gold2)
+}
+
+nav{
+  display:flex;
+  gap:25px;
+  align-items:center
+}
+
+nav a{
+  color:#d7d0c2;
+  font-size:13px;
+  font-weight:750
+}
+
+nav a:hover{
+  color:var(--gold2)
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 20px;
+  border-radius:4px;
+  font-weight:850;
+  font-size:13px;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  transition:.2s
+}
+
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#080808;
+  box-shadow:0 12px 30px rgba(213,166,74,.24)
+}
+
+.btn-gold:hover{
+  transform:translateY(-1px);
+  filter:brightness(1.05)
+}
+
+.btn-outline{
+  border:1px solid rgba(244,212,119,.55);
+  color:var(--gold2)
+}
+
+.hero{
+  background:
+  radial-gradient(circle at 80% 20%,rgba(213,166,74,.16),transparent 30%),
+  radial-gradient(circle at 20% 90%,rgba(213,166,74,.08),transparent 32%),
+  linear-gradient(135deg,#030303,#11100d 55%,#050505);
+  color:white;
+  overflow:hidden
+}
+
+.hero-grid{
+  min-height:690px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:55px;
+  align-items:center
+}
+
+.hero-copy .eyebrow,
+.section-kicker{
+  display:inline-block;
+  color:var(--gold2);
+  font-size:11px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.18em
+}
+
+h1{
+  font-family:Georgia,serif;
+  font-size:clamp(44px,6vw,76px);
+  line-height:1.02;
+  letter-spacing:-.045em;
+  margin:17px 0 22px
+}
+
+.hero p{
+  max-width:650px;
+  color:#d4cec3;
+  font-size:18px
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:30px
+}
+
+.hero-logo{
+  display:flex;
+  justify-content:center;
+  align-items:center
+}
+
+.hero-logo img{
+  width:min(470px,100%);
+  height:auto;
+  filter:drop-shadow(0 24px 50px rgba(0,0,0,.5))
+}
+
+.trust{
+  background:var(--gold);
+  color:#080808
+}
+
+.trust-row{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px
+}
+
+.trust-item{
+  padding:21px 12px;
+  text-align:center;
+  border-right:1px solid rgba(0,0,0,.14);
+  font-weight:850;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.08em
+}
+
+section{
+  padding:92px 0
+}
+
+.section-head{
+  max-width:760px;
+  margin-bottom:45px
+}
+
+h2{
+  font-family:Georgia,serif;
+  font-size:clamp(34px,4vw,52px);
+  line-height:1.08;
+  letter-spacing:-.04em;
+  margin:10px 0 15px
+}
+
+.lead{
+  font-size:18px;
+  color:var(--muted)
+}
+
+.services{
+  background:#fff
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px
+}
+
+.card{
+  padding:29px;
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:0 12px 40px rgba(0,0,0,.045);
+  position:relative;
+  overflow:hidden
+}
+
+.card:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background:linear-gradient(90deg,var(--gold3),var(--gold2))
+}
+
+.icon{
+  font-size:26px;
+  color:var(--gold3)
+}
+
+.card h3{
+  font-family:Georgia,serif;
+  font-size:23px;
+  margin:13px 0 7px
+}
+
+.card p{
+  margin:0;
+  color:var(--muted)
+}
+
+.about{
+  background:var(--cream)
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:65px;
+  align-items:center
+}
+
+.logo-panel{
+  background:#050505;
+  padding:30px;
+  border:1px solid rgba(213,166,74,.28);
+  box-shadow:var(--shadow)
+}
+
+.logo-panel img{
+  display:block;
+  width:100%;
+  height:auto
+}
+
+.feature-list{
+  display:grid;
+  gap:15px;
+  margin-top:28px
+}
+
+.feature{
+  display:flex;
+  gap:13px
+}
+
+.feature .tick{
+  color:var(--gold3);
+  font-weight:1000
+}
+
+.feature b{
+  display:block
+}
+
+.feature span{
+  display:block;
+  color:var(--muted);
+  font-size:14px
+}
+
+.dark{
+  background:var(--black);
+  color:white
+}
+
+.dark .lead{
+  color:#bdb6aa
+}
+
+.commercial-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px
+}
+
+.dark-card{
+  padding:30px;
+  border:1px solid rgba(213,166,74,.24);
+  background:linear-gradient(145deg,#0b0b0b,#12110e)
+}
+
+.dark-card h3{
+  font-family:Georgia,serif;
+  color:var(--gold2);
+  font-size:23px
+}
+
+.dark-card p{
+  color:#c7c0b4
+}
+
+.plans{
+  background:#fff
+}
+
+.plan-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px
+}
+
+.plan{
+  border:1px solid var(--line);
+  padding:32px;
+  background:#fff;
+  box-shadow:0 12px 40px rgba(0,0,0,.05)
+}
+
+.plan.featured{
+  border-color:var(--gold);
+  box-shadow:0 18px 50px rgba(156,106,34,.12)
+}
+
+.plan-label{
+  color:var(--gold3);
+  font-weight:900;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.14em
+}
+
+.plan h3{
+  font-family:Georgia,serif;
+  font-size:28px;
+  margin:10px 0
+}
+
+.plan ul{
+  padding-left:18px;
+  color:var(--muted)
+}
+
+.plan li{
+  margin:8px 0
+}
+
+.process{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px
+}
+
+.step{
+  padding:25px;
+  border:1px solid var(--line);
+  background:#fff
+}
+
+.num{
+  color:var(--gold3);
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:.15em
+}
+
+.step h3{
+  font-family:Georgia,serif
+}
+
+.step p{
+  color:var(--muted);
+  font-size:14px
+}
+
+.cta{
+  background:linear-gradient(135deg,#0a0a0a,#1b1710);
+  color:white
+}
+
+.cta-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:35px
+}
+
+.cta p{
+  color:#cfc7ba
+}
+
+footer{
+  background:#030303;
+  color:#a9a297;
+  padding:55px 0
+}
+
+.footer-logo{
+  width:220px;
+  max-width:100%;
+  display:block;
+  margin-bottom:18px
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:45px
+}
+
+footer h3{
+  color:var(--gold2);
+  font-family:Georgia,serif
+}
+
+footer a:hover{
+  color:var(--gold2)
+}
+
+.fine{
+  border-top:1px solid rgba(255,255,255,.1);
+  margin-top:35px;
+  padding-top:20px;
+  font-size:12px
+}
+
+.mobile{
+  display:none
+}
+
+@media(max-width:850px){
+
+  nav{
+    display:none
+  }
+
+  .mobile{
+    display:inline-flex
+  }
+
+  .hero-grid,
+  .about-grid,
+  .commercial-grid{
+    grid-template-columns:1fr
+  }
+
+  .hero-grid{
+    padding:75px 0;
+    min-height:auto
+  }
+
+  .hero-logo{
+    order:-1
+  }
+
+  .hero-logo img{
+    max-width:330px
+  }
+
+  .cards{
+    grid-template-columns:1fr 1fr
+  }
+
+  .trust-row{
+    grid-template-columns:1fr 1fr
+  }
+
+  .process{
+    grid-template-columns:1fr 1fr
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr
+  }
+
+  .cta-inner{
+    flex-direction:column;
+    align-items:flex-start
+  }
+}
+
+@media(max-width:560px){
+
+  .cards,
+  .plan-grid,
+  .process{
+    grid-template-columns:1fr
+  }
+
+  section{
+    padding:68px 0
+  }
+
+  .trust-item{
+    font-size:10px
+  }
+
+  .logo-word{
+    font-size:18px
+  }
+}
+</style>
 </head>
+
 <body>
-  <h1>Hermes Royal</h1>
-  <p>Website connection test.</p>
+
+<header>
+  <div class="container nav">
+
+    <a href="#top" class="logo-word">
+      HERMES <span>ROYAL</span> INC.
+    </a>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#commercial">Commercial</a>
+      <a href="#maintenance">Maintenance</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="btn btn-gold mobile" href="#contact">
+      Get Started
+    </a>
+
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div class="hero-copy">
+
+      <span class="eyebrow">
+        HVAC • Heating • Cooling • Building Services
+      </span>
+
+      <h1>
+        You point it.<br>
+        <span style="color:var(--gold2)">We solve it.</span>
+      </h1>
+
+      <p>
+        Hermes Royal Inc. provides professional HVAC service for residential,
+        commercial, and multi-unit properties. From diagnostics and repairs to
+        complete installations and preventive maintenance, we bring a practical,
+        professional approach to every project.
+      </p>
+
+      <div class="actions">
+
+        <a class="btn btn-gold" href="#contact">
+          Request a Quote
+        </a>
+
+        <a class="btn btn-outline" href="#services">
+          Explore Services
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-logo">
+
+      <img
+        src="https://raw.githubusercontent.com/stareaglemusic/Hermes-Royal/main/hermes-royal-logo-transparent.png"
+        alt="Hermes Royal Inc. logo"
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="trust">
+
+  <div class="container trust-row">
+
+    <div class="trust-item">
+      Residential HVAC
+    </div>
+
+    <div class="trust-item">
+      Commercial HVAC
+    </div>
+
+    <div class="trust-item">
+      Preventive Maintenance
+    </div>
+
+    <div class="trust-item">
+      Emergency Service
+    </div>
+
+  </div>
+
+</div>
+
+<section id="services" class="services">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="section-kicker">
+        Our services
+      </span>
+
+      <h2>
+        One company for the work your HVAC system needs.
+      </h2>
+
+      <p class="lead">
+        From a single service call to recurring commercial maintenance,
+        Hermes Royal Inc. handles the job with a clear scope, professional
+        communication, and attention to the equipment.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="icon">❄</div>
+        <h3>Central Air Conditioning</h3>
+        <p>
+          Installation, replacement, diagnostics, service, and repair of
+          central A/C systems.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">◈</div>
+        <h3>Ductless Mini-Splits</h3>
+        <p>
+          Single-zone and multi-zone mini-split installation,
+          troubleshooting, service, and maintenance.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">✦</div>
+        <h3>Heat Pumps</h3>
+        <p>
+          Heat pump installation, replacement, diagnostics, repair,
+          and ongoing maintenance.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">⚙</div>
+        <h3>Diagnostics & Repair</h3>
+        <p>
+          System troubleshooting, component checks, refrigerant-related
+          service, and repair recommendations.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">▣</div>
+        <h3>Commercial HVAC</h3>
+        <p>
+          Service and maintenance for businesses, buildings, hotels,
+          facilities, and multi-unit properties.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">⌂</div>
+        <h3>System Replacement</h3>
+        <p>
+          Project-based HVAC replacement and installation with equipment
+          planning and defined scope of work.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="about" class="about">
+
+  <div class="container about-grid">
+
+    <div class="logo-panel">
+
+      <img
+        src="https://raw.githubusercontent.com/stareaglemusic/Hermes-Royal/main/hermes-royal-logo-transparent.png"
+        alt="Hermes Royal Inc. gold logo"
+      >
+
+    </div>
+
+    <div>
+
+      <span class="section-kicker">
+        About Hermes Royal Inc.
+      </span>
+
+      <h2>
+        Built around service, craftsmanship, and solutions.
+      </h2>
+
+      <p class="lead">
+        Hermes Royal Inc. is a New York HVAC company serving residential
+        and commercial customers. The company works across installations,
+        repairs, diagnostics, system replacements, and preventive maintenance.
+      </p>
+
+      <div class="feature-list">
+
+        <div class="feature">
+          <span class="tick">◆</span>
+          <div>
+            <b>Residential & commercial</b>
+            <span>
+              Flexible service for homes, businesses, multi-unit properties,
+              and larger facilities.
+            </span>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span class="tick">◆</span>
+          <div>
+            <b>Installation & replacement</b>
+            <span>
+              Mini-splits, central A/C, heat pumps, and larger HVAC equipment.
+            </span>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span class="tick">◆</span>
+          <div>
+            <b>Professional diagnostics</b>
+            <span>
+              Start with the problem, identify the cause, then explain
+              the repair or replacement path.
+            </span>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span class="tick">◆</span>
+          <div>
+            <b>Emergency availability</b>
+            <span>
+              Emergency HVAC service is available for urgent heating
+              and cooling problems.
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="commercial" class="dark">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="section-kicker">
+        Commercial HVAC
+      </span>
+
+      <h2>
+        Service programs designed for real properties.
+      </h2>
+
+      <p class="lead">
+        For commercial buildings and multi-unit facilities, HVAC work can
+        be organized into scheduled maintenance, service calls, repairs,
+        and larger projects.
+      </p>
+
+    </div>
+
+    <div class="commercial-grid">
+
+      <div class="dark-card">
+        <h3>Preventive Maintenance</h3>
+        <p>
+          Recurring inspections, drain service, filter changes, component
+          checks, performance review, and identification of repairs that
+          may need attention.
+        </p>
+      </div>
+
+      <div class="dark-card">
+        <h3>Multi-Unit Properties</h3>
+        <p>
+          Maintenance can be organized by indoor units, outdoor equipment,
+          rooftop equipment, equipment type, and building needs.
+        </p>
+      </div>
+
+      <div class="dark-card">
+        <h3>Rooftop Equipment</h3>
+        <p>
+          Inspection, troubleshooting, preventive maintenance, and repair
+          planning for larger rooftop HVAC equipment.
+        </p>
+      </div>
+
+      <div class="dark-card">
+        <h3>Project Work</h3>
+        <p>
+          For larger installations and replacements, proposals can define
+          equipment, scope, labor, materials, deposits, and completion terms.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="maintenance" class="plans">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="section-kicker">
+        Maintenance programs
+      </span>
+
+      <h2>
+        Protect the equipment that keeps your property comfortable.
+      </h2>
+
+      <p class="lead">
+        Maintenance frequency can be structured around the property,
+        equipment, usage, and operating needs.
+      </p>
+
+    </div>
+
+    <div class="plan-grid">
+
+      <div class="plan featured">
+
+        <span class="plan-label">
+          Two visits per year
+        </span>
+
+        <h3>
+          Seasonal Maintenance
+        </h3>
+
+        <ul>
+          <li>Scheduled HVAC inspection</li>
+          <li>Drain and filter service</li>
+          <li>System and component checks</li>
+          <li>Performance review</li>
+          <li>Identify recommended repairs</li>
+        </ul>
+
+      </div>
+
+      <div class="plan">
+
+        <span class="plan-label">
+          Four visits per year
+        </span>
+
+        <h3>
+          Quarterly Maintenance
+        </h3>
+
+        <ul>
+          <li>More frequent equipment checks</li>
+          <li>Routine cleaning and maintenance</li>
+          <li>Drain and filter service</li>
+          <li>Performance monitoring</li>
+          <li>Early identification of issues</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="section-kicker">
+        How we work
+      </span>
+
+      <h2>
+        A straightforward process from call to completion.
+      </h2>
+
+    </div>
+
+    <div class="process">
+
+      <div class="step">
+        <div class="num">01 — DISCOVER</div>
+        <h3>Understand the problem</h3>
+        <p>
+          We learn what the system is doing, inspect the equipment,
+          and identify the scope.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="num">02 — DIAGNOSE</div>
+        <h3>Find the cause</h3>
+        <p>
+          We troubleshoot the system and explain what needs attention.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="num">03 — PROPOSE</div>
+        <h3>Present the solution</h3>
+        <p>
+          For larger work, the scope can be documented in a professional
+          proposal or quote.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="num">04 — SOLVE</div>
+        <h3>Complete the work</h3>
+        <p>
+          We perform the approved work and communicate what was completed.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <div class="container cta-inner">
+
+    <div>
+
+      <span class="section-kicker">
+        Start your project
+      </span>
+
+      <h2>
+        Need HVAC service or a commercial proposal?
+      </h2>
+
+      <p>
+        Tell Hermes Royal Inc. what you need. We'll help define the next step.
+      </p>
+
+    </div>
+
+    <a class="btn btn-gold" href="#contact">
+      Contact Hermes Royal
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer id="contact">
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <img
+          class="footer-logo"
+          src="https://raw.githubusercontent.com/stareaglemusic/Hermes-Royal/main/hermes-royal-circle-logo.png"
+          alt="Hermes Royal Inc. circular logo"
+        >
+
+        <h3>
+          HERMES ROYAL INC.
+        </h3>
+
+        <p>
+          Heating, cooling, HVAC installation, diagnostics, repair,
+          and preventive maintenance for residential and commercial properties.
+        </p>
+
+        <p>
+          <strong style="color:#fff">
+            You point it. We solve it.
+          </strong>
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>
+          Business Hours
+        </h3>
+
+        <p>
+          Monday–Friday: 8:00 AM–4:00 PM<br>
+          Saturday: 9:00 AM–3:00 PM<br>
+          Sunday: Emergency service
+        </p>
+
+        <p>
+          24/7 emergency service availability.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>
+          Service Areas
+        </h3>
+
+        <p>
+          New York City and surrounding service areas.
+        </p>
+
+        <p>
+          <a href="#services">
+            View HVAC services →
+          </a>
+        </p>
+
+        <p>
+          <a href="#commercial">
+            Commercial services →
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="fine">
+      © 2026 Hermes Royal Inc. All rights reserved. • hermesroyal.us
+    </div>
+
+  </div>
+
+</footer>
+
 </body>
 </html>
