@@ -67,8 +67,8 @@ nav .btn{min-height:46px;padding:0 20px;font-size:13px}
 /* hero */
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:110px;padding-bottom:80px;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 42%,rgba(212,165,72,.10),transparent 70%);pointer-events:none}
-.hero-logo{width:min(600px,88vw);height:auto;position:relative;animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
-.hero h1{position:relative;font-size:clamp(38px,5vw,64px);font-weight:500;max-width:900px;margin-top:44px;animation:fade 1.2s .5s both}
+.hero-logo{width:min(420px,70vw);height:auto;position:relative;animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
+.hero h1{position:relative;font-size:clamp(38px,5vw,64px);font-weight:500;max-width:900px;margin-top:36px;animation:fade 1.2s .5s both}
 .hero p{position:relative;font-size:clamp(16px,1.4vw,19px);color:var(--soft);max-width:620px;margin-top:22px;animation:fade 1.2s .7s both}
 .hero-cta{position:relative;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:40px;animation:fade 1.2s .9s both}
 @keyframes rise{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
@@ -159,7 +159,7 @@ footer .tag{font-family:var(--serif);font-style:italic;font-size:22px}
 
 /* tablet (iPad) */
 @media (min-width:761px) and (max-width:1100px){
-  .hero-logo{width:min(560px,74vw)}
+  .hero-logo{width:min(400px,56vw)}
   .services{grid-template-columns:repeat(2,minmax(0,1fr))}
   .serve{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
   .serve div{padding:32px 24px}
@@ -178,7 +178,7 @@ footer .tag{font-family:var(--serif);font-style:italic;font-size:22px}
   nav .btn{display:none}
   header{height:68px}
   .hero{min-height:auto;padding-top:96px;padding-bottom:64px}
-  .hero-logo{width:min(380px,92vw)}
+  .hero-logo{width:min(280px,72vw)}
   .hero-cta{flex-direction:column;align-items:stretch;width:100%;max-width:360px}
   .trust div{padding:24px 12px}
   .trust b{font-size:21px}
@@ -378,8 +378,8 @@ footer .tag{font-family:var(--serif);font-style:italic;font-size:22px}
 
 <script>
 /* ===== EDIT THESE THREE LINES ===== */
-var PHONE_DISPLAY = "";          // e.g. "(718) 555-1234"
-var PHONE_DIGITS  = "";          // e.g. "+17185551234"
+var PHONE_DISPLAY = "(917) 400-4079";          // e.g. "(718) 555-1234"
+var PHONE_DIGITS  = "+19174004079";          // e.g. "+17185551234"
 var HOURS         = "";          // e.g. "Mon–Sat 8am–6pm"
 /* ================================== */
 
