@@ -147,6 +147,9 @@ label{display:flex;flex-direction:column;gap:8px;font-size:12px;font-weight:700;
 input,select,textarea{font:inherit;font-size:16px;letter-spacing:0;text-transform:none;color:var(--text);background:var(--black);border:1px solid #3A3226;border-radius:2px;padding:14px 16px}
 input,select{height:54px}
 input:focus,select:focus,textarea:focus{border-color:var(--gold-2);outline:none}
+select{-webkit-appearance:none;appearance:none;cursor:pointer;padding-right:48px;background-color:var(--black);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='%23F3E3A0' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6,9 12,15 18,9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:22px}
+select:invalid{color:var(--dim)}
+select option{background:var(--onyx);color:var(--text)}
 textarea{resize:vertical;min-height:130px}
 .form-note{font-size:13px;color:var(--dim)}
 @media (max-width:900px){.contact{grid-template-columns:1fr}}
@@ -198,7 +201,7 @@ footer .tag{font-family:var(--serif);font-style:italic;font-size:22px}
     <a class="link" href="#story">Our Story</a>
     <a class="link" href="#process">Process</a>
     <a class="link" href="#contact">Contact</a>
-    <a class="btn btn-gold js-tel" href="#">Call Now</a>
+    <a class="btn btn-gold js-tel" href="tel:+19174004079">Call Now</a>
     <button class="menu-btn" id="menu-open" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
   </nav>
 </header>
@@ -208,7 +211,7 @@ footer .tag{font-family:var(--serif);font-style:italic;font-size:22px}
   <a href="#story">Our Story</a>
   <a href="#process">Process</a>
   <a href="#contact">Contact</a>
-  <a class="btn btn-gold js-tel" href="#">Call Now</a>
+  <a class="btn btn-gold js-tel" href="tel:+19174004079">Call Now</a>
 </div>
 
 
@@ -220,9 +223,9 @@ footer .tag{font-family:var(--serif);font-style:italic;font-size:22px}
   <p>Licensed and insured in New York City and Westchester. Serving homes, buildings and institutions across the Bronx, Manhattan and Westchester since 2014.</p>
   <div class="hero-cta">
     <a class="btn btn-gold" href="#contact">Get a Free Estimate</a>
-    <a class="btn btn-line js-tel" href="#">
+    <a class="btn btn-line js-tel" href="tel:+19174004079">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-      <span class="js-phone">Call Us</span>
+      <span class="js-phone">(917) 400-4079</span>
     </a>
   </div>
 </section>
@@ -326,7 +329,7 @@ footer .tag{font-family:var(--serif);font-style:italic;font-size:22px}
 <section class="wrap section band">
   <h2>Point it out. <span class="gold-text">We'll solve it.</span></h2>
   <p>Free estimates for homes, businesses and buildings.</p>
-  <a class="phone-big gold-text js-tel js-phone" href="#">Call Us Today</a>
+  <a class="phone-big gold-text js-tel js-phone" href="tel:+19174004079">(917) 400-4079</a>
   <div class="hero-cta"><a class="btn btn-gold" href="#contact">Request an Estimate</a></div>
 </section>
 
@@ -337,7 +340,7 @@ footer .tag{font-family:var(--serif);font-style:italic;font-size:22px}
     <h2 class="h2">Get your <span class="gold-text">free estimate.</span></h2>
     <p style="color:var(--soft)">Tell us what's going on and we'll get back to you promptly.</p>
     <div class="contact-list">
-      <a class="js-tel" href="#"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="js-phone">Call us</span></a>
+      <a class="js-tel" href="tel:+19174004079"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="js-phone">(917) 400-4079</span></a>
       <a href="mailto:info@hermesroyal.us"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>info@hermesroyal.us</a>
       <a href="https://instagram.com/hermes_royal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>@hermes_royal</a>
       <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Bronx, NY · <span class="js-hours">Call for hours</span></span></div>
@@ -351,7 +354,8 @@ footer .tag{font-family:var(--serif);font-style:italic;font-size:22px}
     <div class="row2">
       <label>Email<input type="email" name="email" autocomplete="email"></label>
       <label>Service
-        <select name="service">
+        <select name="service" required>
+          <option value="" disabled selected>Select a service</option>
           <option>Air Conditioning</option><option>Heating</option><option>Ductless Mini-Split</option>
           <option>Commercial HVAC</option><option>Preventive Maintenance</option><option>Home Improvement</option><option>Other</option>
         </select>
@@ -372,7 +376,7 @@ footer .tag{font-family:var(--serif);font-style:italic;font-size:22px}
 </footer>
 
 <div class="callbar">
-  <a class="btn btn-gold js-tel" href="#">Call Now</a>
+  <a class="btn btn-gold js-tel" href="tel:+19174004079">Call Now</a>
   <a class="btn btn-line" href="#contact">Free Estimate</a>
 </div>
 
@@ -402,7 +406,7 @@ window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 document.getElementById('estimate-form').addEventListener('submit', function (e) {
   e.preventDefault();
   var f = e.target;
-  if (!f.name.value.trim() || !f.message.value.trim()) { alert('Please enter your name and tell us about the job.'); return; }
+  if (!f.name.value.trim() || !f.service.value || !f.message.value.trim()) { alert('Please enter your name, choose a service, and tell us about the job.'); return; }
   var body = 'Name: ' + f.name.value + '\nPhone: ' + f.phone.value + '\nEmail: ' + f.email.value +
              '\nService: ' + f.service.value + '\n\n' + f.message.value;
   window.location.href = 'mailto:info@hermesroyal.us?subject=' +
